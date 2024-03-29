@@ -354,3 +354,173 @@ Symbol(Symbol.iterator)
 // const max = 20;
 // console.log(Math.floor(Math.random() * (max-min + 1))+min) //formula for getting random value but not getting 0
 
+/*Dates of Js */
+// let myDate = new Date()
+// console.log(myDate);//2024-03-29T17:47:18.145Z
+// console.log(myDate.toString());//Fri Mar 29 2024 17:48:09 GMT+0000 (Coordinated Universal Time)
+// console.log(myDate.toDateString());//Fri Mar 29 2024
+// console.log(myDate.toLocaleString());//3/29/2024, 5:51:35 PM
+// console.log(myDate.toLocaleDateString());//3/29/2024
+// console.log(myDate.toLocaleTimeString());//5:51:35 PM
+// console.log(myDate.toTimeString());//17:51:35 GMT+0000 (Coordinated Universal Time)
+
+// console.log(typeof myDate);
+
+// let myCreateedDate = new Date(2023, 0, 23)
+// let myCreateedDate = new Date(2023, 0, 23, 5, 3)
+// let myCreateedDate = new Date("2023-01-14")
+// console.log(myCreateedDate.toDateString());
+
+// let myTimeStamp = Date.now()
+// console.log(myTimeStamp);
+// console.log(myCreateedDate.getTime());
+// console.log(Math.floor((Date.now()/(3600000*24))/365));//date during 1970-2024(54 years)
+
+// let newDate = new Date();
+// console.log(newDate.getMonth());
+
+// newDate.toLocaleString('default',{
+//     weekday: "long",
+//     day:"2-digit"
+// })
+
+/*Arrays */
+const myArr = [0, 1, 2, 3, 4, 5]
+const myarr = new Array(1,2,3,4)
+
+// myArr.push(6)
+// myArr.pop()
+// myArr.unshift(0)//[0, 0, 1, 2,3, 4, 5]
+// myArr.shift()
+
+// console.log(myArr.includes(9)) //false means 9 not present
+// console.log(myArr.indexOf(9)) //-1
+
+// const newArr = myArr.join()//creates the whole array into string
+
+// console.log(newArr);
+
+
+//Slice, Splice
+// console.log("A", myArr);
+
+// const myn1 = myArr.slice(1,3)//Returns a copy of a section of an array
+// console.log(myn1)
+
+// console.log("B", myArr);
+
+// const myn2 = myArr.splice(1,3)
+// console.log("c", myArr);//that affects the original array
+// console.log(myn2)
+// const marvel = ["thor","captain","Ironman"]
+// const dc = ["superman","batman","Aquaman"]
+
+// marvel.push(dc)
+
+// console.log(marvel);//[ 'thor', 'captain', 'Ironman', [ 'superman', 'batman', 'Aquaman' ] ] problrm there was the push of array inside of array
+
+// const all_heros = marvel.concat(dc)
+// console.log(all_heros);//[ 'thor', 'captain', 'Ironman', 'superman', 'batman', 'Aquaman' ]
+
+// const allnewheros = [...marvel, ...dc]//spreads the array here all elements are create different types of array
+// console.log(allnewheros);//[ 'thor', 'captain', 'Ironman', 'superman', 'batman', 'Aquaman' ]
+
+// const anotherArray = [1,2,3,[4,5],7,[8,9,[10,11]]]
+
+// const real_another_array = anotherArray.flat(Infinity)//eturns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+// console.log(real_another_array);//[1, 2, 3,  4,  5,7, 8, 9, 10, 11]
+// console.log(Array.isArray("Somnath"))//false
+// console.log(Array.from("Somnath"))//['S', 'o', 'm','n', 'a', 't','h']
+// console.log(Array.from({name:"Somnath"}));//always there was an empty array for case of object just because it's cannot rectify whicch element should be converted
+
+// let a= 100
+// let b = 200
+// let c= 300
+
+// console.log(Array.of(a,b,c));//convert veriable to array
+
+/*Objects */
+//Singleton
+// Object.create()
+
+//Objects Literals
+// const mySym = Symbol("key1")
+// const JsUser = {
+//     name:"Somnath",
+//     1:"Full Stack Developer",
+//     isloggedin:false,
+//     lastlogin: ["Monday", "Staurday"],
+//     [mySym]: "myKey1" //for using like symbol use squre brackets
+//     ,"full_name": "Somnath Mondal"
+// }
+// console.log(JsUser.name);
+// console.log(JsUser[1]);
+// console.log(JsUser["lastlogin"]);
+// console.log( typeof JsUser[mySym]);
+// JsUser.isloggedin = true
+// Object.freeze(JsUser)//Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+// // JsUser.isloggedin=false // get error
+// console.log(JsUser);
+
+// JsUser.greeting = function () {
+//     console.log(("Hello"));
+// }
+// JsUser.greeting2 = function () {
+//     console.log((`Hello js user, ${this.full_name}`));
+// }
+// console.log(JsUser.greeting());
+// console.log(JsUser.greeting2());
+
+// const tinderuser = new Object()
+// const tinderuser = {}
+
+// tinderuser.id = "123"
+// tinderuser.name = "Som"
+
+// // console.log(tinderuser);
+
+// const regularuser = {
+//     email: "som@gmail.com",
+//     fullname:{
+//         firstname:"Somnath",
+//         lastname:"Mondal"
+//     }
+// }
+
+// // console.log(regularuser);
+// // console.log(regularuser.fullname.firstname);
+
+// const obj1 = {1: "a", 2:"b"}
+// const obj2 = {3: "c", 4:"d"}
+
+// // const obj3=Object.assign({},obj1,obj2)//target,source
+// const obj3 = {...obj1, ...obj2}
+// // console.log(obj3);
+
+// const users = [
+//     {
+//         id:1,
+//         email:"h@gmail.com"
+//     },
+//     {
+//         id:2,
+//         email:"h@gmail.com"
+//     },
+//     {
+//         id:3,
+//         email:"h@gmail.com"
+//     },
+
+// ]
+
+// console.log(users[1].id);
+// console.log(Object.keys(tinderuser));//important
+// console.log(Object.values(tinderuser));//important
+// console.log(Object.entries(tinderuser));
+// console.log(tinderuser.hasOwnProperty('islogged'));
+
+
+
+
+
+
