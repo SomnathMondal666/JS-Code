@@ -385,8 +385,8 @@ Symbol(Symbol.iterator)
 // })
 
 /*Arrays */
-const myArr = [0, 1, 2, 3, 4, 5]
-const myarr = new Array(1,2,3,4)
+// const myArr = [0, 1, 2, 3, 4, 5]
+// const myarr = new Array(1,2,3,4)
 
 // myArr.push(6)
 // myArr.pop()
@@ -521,11 +521,11 @@ const myarr = new Array(1,2,3,4)
 
 /* Object De-structuring */
 
-const course = {
-    coursename: "Js in Hindi",
-    price: "999",
-    CourseInstructor:"Somnath"
-}
+// const course = {
+//     coursename: "Js in Hindi",
+//     price: "999",
+//     CourseInstructor:"Somnath"
+// }
 
 // const {CourseInstructor} = course;
 // console.log(CourseInstructor);//Somnath
@@ -616,15 +616,15 @@ const course = {
 // console.log(b);//20 but the var doesn't follow thw value of scope
 
 /* Nested If-else */
-function one(){
-    const username = "Somnath"
-    function two(){
-        const website = "Youtube"
-        console.log(username);
-    }
-    // console.log(website);//error
-    two()
-}
+// function one(){
+//     const username = "Somnath"
+//     function two(){
+//         const website = "Youtube"
+//         console.log(username);
+//     }
+//     // console.log(website);//error
+//     two()
+// }
 // one()
 
 // console.log(addone(5));//return 6
@@ -687,4 +687,46 @@ function one(){
 //Javascript Executaion Context
 // notes in nootbook
 
-/* Control flow */
+/* Hoisting */
+// function one(){
+//     const username = "Som"
+//     function two(){
+//         const website = "Youtube"
+//         console.log(username);
+//     }
+//     // console.log(website);
+//     two()
+// }
+// one()
+
+
+/* Loop */
+// let myarray = [10,11,2,,2]
+// for(let i=0; i< myarray.length; i++){
+//     const element = myarray[i]
+//     console.log(element);
+// }
+
+//break and continue
+// for (let index = 1; index <= 20; index++) {
+//     if(index ==5){
+//         console.log(`value of index is ${index}`);
+//         // break;
+//         // continue;
+//     }
+//     console.log(`value of index is ${index}`);
+
+    
+// }
+
+let i =0;
+
+// while (i<=10) {
+//     console.log(`value : ${i}`);
+//     i= i+2;
+// }
+
+do{
+    console.log(`value : ${i}`);
+    i++;
+}while(i<10);
