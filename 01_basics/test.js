@@ -519,7 +519,101 @@ const myarr = new Array(1,2,3,4)
 // console.log(Object.entries(tinderuser));
 // console.log(tinderuser.hasOwnProperty('islogged'));
 
+/* Object De-structuring */
 
+const course = {
+    coursename: "Js in Hindi",
+    price: "999",
+    CourseInstructor:"Somnath"
+}
+
+// const {CourseInstructor} = course;
+// console.log(CourseInstructor);//Somnath
+
+// const {CourseInstructor: instructor} = course;
+// console.log(instructor);//Somnath
+//use in React
+// const navbar = (company)=>{
+
+// }
+// navbar(company = "Somnath")
+
+// json
+// {
+//     "name": "Somnath",
+//     "coursename": "js in hindi"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
+/* Function */
+// function add(number1, number2){
+// console.log( number1 + number2);//7
+// }
+// const result = add(3,4);
+// console.log(result);//undefined
+
+// function add(number1, number2){
+//     let result = number1 + number2;
+//     return result;
+// }
+// const result = add(3,4);
+// console.log(result);//7
+
+// function login(username){
+//     // if(username === undefined){ or
+//     if(!username){
+//         console.log("Please enter a username");
+//         return
+//     }
+//     return `${username} is just logged in`
+// }
+// console.log(login("Somnath"))//Somnath is just logged in
+// console.log(login())// if no value given login() then return undefined
+
+//Shopping cart
+// function calculatecartPrice(...num1){  //rest operator (...)for take multiple parameters
+//     return num1;
+// }
+// console.log(calculatecartPrice(100,200,500));//[ 100, 200, 500 ]
+
+// function calculatecartPrice(val1,val2,...num1){  //rest operator (...)for take multiple parameters
+//     return num1;
+// }
+// console.log(calculatecartPrice(100,200,500));//[ 500 ]
+
+// const user ={
+//     username: "Som",
+//     id : "12456"
+// }
+// function handleObject(anyObject) {
+//     console.log(`username is ${anyObject.username} and id is ${anyObject.id}`);
+//}
+// handleObject(user)
+// handleObject({
+//     username: "Sam",
+//     id : "14758"  
+// })
+
+// const myArray = [100, 200, 300, 400]
+// function retunValue(getArray){
+//     return getArray[2]
+// } 
+// console.log(retunValue(myArray));
+// console.log(retunValue([100, 200, 300, 400]));
+
+/* Scopes */
+// let c = 10;//global scope
+// if(true){ 
+//     let a = 10;//block scope
+//     var b = 20;
+// }
+// console.log(a);//a is not defined
+// console.log(b);//20 but the var doesn't follow thw value of scope
 
 
 
