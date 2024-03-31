@@ -615,6 +615,76 @@ const course = {
 // console.log(a);//a is not defined
 // console.log(b);//20 but the var doesn't follow thw value of scope
 
+/* Nested If-else */
+function one(){
+    const username = "Somnath"
+    function two(){
+        const website = "Youtube"
+        console.log(username);
+    }
+    // console.log(website);//error
+    two()
+}
+// one()
+
+// console.log(addone(5));//return 6
+// function addone(num){
+//     return num+1;
+// }
+
+// addTwo(5)//error
+// const addTwo = function(num){
+//     return num+2;
+// }
+// console.log(addTwo(5));//7 its run and give the value is 7
 
 
+/* arrow Function */
+// const user ={
+//     username: "Somnath",
+//     price:999,
+//     welcomeMessage: function(){
+//         console.log(`${this.username} , Welcome to website`);
+//         // console.log(this);
+//     }
+// }
+// user.welcomeMessage()
+// user.username = "Sam"
+// user.welcomeMessage()
+// console.log(this);//here empty object
 
+// function chai(){
+//     let username = "Som"
+//     console.log(this.username);//never read
+//     console.log(this ); //undefined
+// }
+// chai()
+
+// const chai = ()=>{
+//     let username = "Somnath"
+//     console.log(this.username);//undefined
+//     console.log(this);//{}
+// }
+// chai()
+
+// const addtwo = (num1, num2)=>(num1+num2) //if we use parenthisis then we don't need return the value . In react this type have heavy uses
+// console.log(addtwo(3,4));
+
+// const addTwo = (name1)=>({username:name1})
+// console.log(addTwo("Som"))
+
+/* Immediately Invoked Function Expression(IIFE) */
+//IIFE introduce for plooution of global scope
+// (function chai(){
+//     console.log(`Db Connected`);
+// })();//here always apply semicolon for ednding directive
+// (function chai(name){
+//     console.log(`Db Connected ${name}`);
+// })("Som");
+
+
+/* Call Stack */
+//Javascript Executaion Context
+// notes in nootbook
+
+/* Control flow */
