@@ -719,14 +719,182 @@ Symbol(Symbol.iterator)
     
 // }
 
-let i =0;
+// let i =0;
 
-// while (i<=10) {
+// // while (i<=10) {
+// //     console.log(`value : ${i}`);
+// //     i= i+2;
+// // }
+
+// do{
 //     console.log(`value : ${i}`);
-//     i= i+2;
+//     i++;
+// }while(i<10);
+
+//const arr = [1,2,3,4,5]
+
+//For in Loop
+// for (const i in arr) {
+//     console.log(i);
 // }
 
-do{
-    console.log(`value : ${i}`);
-    i++;
-}while(i<10);
+//For of loop
+// const greetings = "Hello"
+//  for (const i of greetings) {
+//     console.log(`each char is ${i}`);
+//  }
+
+//Maps: The Map object holds key-value pairs and remembers the original insertion order of the keys.values are unique
+// const map = new Map()
+// map.set('IN', "India")
+// map.set('US', "United States of America")
+// map.set('Fr', "France")
+// map.set('IN', "India")
+
+// console.log(map);
+
+//For destructering
+// for (const [key] of map){
+//     console.log(key);
+// }
+// for (const [key,value] of map){
+//     console.log(`${key} :- ${value}`);
+// }
+
+// const myobj = {
+//     game1: "NFS",
+//     game2: "Spiderman"
+// }
+
+// for using itrate the object for-of loop is not used.
+//itratre any loop using for in loop.
+// for(const key in myobj){
+//     console.log(`${key} shortcut is for ${myobj[key]}`);
+// }
+
+//Arrays has also keys that's are those index numbers using for in loop print arays keys
+// const arr = ["som","jeet","dipu","abhi"];
+// for(const key in arr){
+//     console.log(key)//0 1 2 3 
+// }
+
+
+// const map = new Map()
+// map.set('IN', "India")
+// map.set('US', "United States of America")
+// map.set('Fr', "France")
+// map.set('IN', "India")
+
+// for(const key in map){
+//     console.log(key)
+// }
+
+// maps are not iteratable
+
+//for-Each Loop
+// const coding = ["js", "ruby", "java", "python", "cpp"]
+
+// coding.forEach( function (item){
+//     console.log(item);
+// }) //put a callback using function
+// or
+// coding.forEach( (item)=>{
+//     console.log(item);
+// }) //put a callback using arrow function
+// or
+// function printme(item){
+//     console.log(item);
+// }
+// coding.forEach(printme) 
+
+// coding.forEach((item, index, arr)=>{
+//     console.log(item, index, arr);
+// })
+
+/* Important */
+// const mycoading = [
+//     {
+//         languagename: "javascript",
+//         languageFileName: "js"
+//     },
+//     {
+//         languagename: "java",
+//         languageFileName: "java"
+//     },
+//     {
+//         languagename: "python",
+//         languageFileName: "py"
+//     }
+// ]
+
+// mycoading.forEach((item)=>{
+//     console.log(item.languagename);
+// })
+
+// const coding = ["js", "ruby", "java", "python", "cpp"]
+// const values = coding.forEach( (element) => {
+//     console.log(element);
+//     return element
+// });
+// console.log(values); not worked just because foreach are not returning any value
+
+// const mynums = [1,2,3,4,5,6,7,8,9,10]
+// const newnums = mynums.filter( (num)=> num>4)
+// console.log(newnums);
+// or
+// const newnums = mynums.filter( (num)=> {
+//     return num>4
+// })
+// console.log(newnums);
+// or
+// const newNums = []
+
+// mynums.forEach((num) => {
+//     if(num > 4){
+//         newNums.push(num)
+//     }
+// })
+
+// console.log(newNums);
+
+// important
+// const books = [
+//     {book_name:"book1", genre:"Science", publish:1987},
+//     {book_name:"book2", genre:"History", publish:2000},
+//     {book_name:"book3", genre:"Science", publish:2004},
+//     {book_name:"book4", genre:"Mythology", publish:1997}
+// ];
+// const userdemand = books.filter((bk) => bk.genre==="Science")
+
+// console.log(userdemand);
+
+// const newNums = mynums.map( (num)=> num+10);
+
+// const newNums = mynums.map( (num)=> { return num+10});
+// console.log(newNums);
+
+// meathod chaining
+// const newNums = mynums
+//                     .map((num)=> num*10)
+//                     .map( (num)=> num+2)
+//                     .filter( (num)=> num >= 40)
+// console.log(newNums);
+
+/* Reduce */
+// const myNums = [1, 2, 3]
+// // const myTotal = myNums.reduce(function (acc,cur_val){
+// //     console.log(`acc: ${acc} and curval: ${cur_val}`);
+// //     return acc + cur_val
+// // },1)
+// // console.log(myTotal);
+
+// const myTotal = myNums.reduce((acc,cur)=>acc+cur,0)
+// console.log(myTotal);
+
+// const shopingCart = [
+//     {itemName: "Js Course", course_Price:2999},
+//     {itemName: "Java Course", course_Price:4999},
+//     {itemName: "Py Course", course_Price:3999}
+// ]
+// const pricetopay = shopingCart.reduce((acc, item) => acc + item.course_Price, 0)
+// console.log(pricetopay);
